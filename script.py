@@ -32,13 +32,12 @@ rating_dict = {'Loved it': 5, 'Liked it': 4, 'Was okay': 3, 'Not great': 2, 'Hat
  
 #transform rating column
 reviews['rating'] = reviews['rating'].map(rating_dict)
-print(reviews['rating'].value_counts())
 
 #print your transformed column values
-print(reviews['department_name'].value_counts())
+print(reviews['rating'].value_counts())
 
 #get the number of categories in a feature
-
+print(reviews['department_name'].value_counts())
  
 #perform get_dummies
 one_hot = pd.get_dummies(reviews['department_name'])
